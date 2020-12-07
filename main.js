@@ -63,6 +63,7 @@ let x = {
 // Add event click to the main Container
 mainContainer.addEventListener('click', (e) => {
     dataValue = e.target.closest("#file-container").children[1].dataset["name"];
+    sliderWidth = e.target.closest("#file-container").children[1].offsetWidth;
     if(e.target.classList[0] === "r" || e.target.classList[1] === "r")
     {
         sliderWidth = document.querySelector(".slider").offsetWidth;
@@ -79,7 +80,7 @@ function slider(direction, dataValue)
 {
     if(direction === "+")
     {
-        if(x[dataValue] + 115 >= sliderWidth) return;        
+        if(x[dataValue] + 345 >= sliderWidth) return;        
         document.querySelector(`[data-name='${dataValue}']`).style.transform = `translateX(${x[dataValue] += move}px)`;
     }
     else
