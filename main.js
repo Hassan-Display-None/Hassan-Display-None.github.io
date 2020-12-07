@@ -51,7 +51,11 @@ let x = {
     "Thermodynamics": 0,
     "Electrical-Engineering": 0,
     "Material-science-I": 0,
-    "Technical-English-II": 0
+    "Technical-English-II": 0,
+    "Lab-of-Material": 0,
+    "Lab-of-Mechanics-of-Material-I": 0,
+    "Lab-of-Electric-DC": 0,
+    "Lab-of-Thermodynamics": 0
 };
 
 
