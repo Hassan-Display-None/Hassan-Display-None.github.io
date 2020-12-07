@@ -41,7 +41,7 @@ list.addEventListener('click', (e) => {
 
 // All the variables that we need
 const mainContainer = document.querySelector("#main-container");
-let sliderWidth = document.querySelector(".slider").offsetWidth;
+let sliderWidth;
 let move = 345;
 let x = {
     "Mechanics-of-Material": 0,
@@ -65,6 +65,7 @@ mainContainer.addEventListener('click', (e) => {
     dataValue = e.target.closest("#file-container").children[1].dataset["name"];
     if(e.target.classList[0] === "r" || e.target.classList[1] === "r")
     {
+        sliderWidth = document.querySelector(".slider").offsetWidth;
         slider("-", dataValue);
     }
     else if (e.target.classList[2] === "l" || e.target.classList[0] === "l")
@@ -78,7 +79,7 @@ function slider(direction, dataValue)
 {
     if(direction === "+")
     {
-        if(x[dataValue] + 345 >= sliderWidth) return;        
+        if(x[dataValue] + 115 >= sliderWidth) return;        
         document.querySelector(`[data-name='${dataValue}']`).style.transform = `translateX(${x[dataValue] += move}px)`;
     }
     else
